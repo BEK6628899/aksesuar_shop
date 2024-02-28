@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Tooplate's Little Fashion - Product Detail</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/slick.css' %}"/>
+
+        <link href="{% static 'css/tooplate-little-fashion.css' %}" rel="stylesheet">
+    </head>
+
+
+
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+        <main>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <strong><span>Accessory</span> Shop</strong>
+                    </a>
+                    <div class="d-lg-none">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        <a href="product-detail.html" class="bi-bag custom-icon"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/products/">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact/">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about/">About</a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-lg-block">
+                            <a href="/signin/" class="bi-person custom-icon me-3"></a>
+                            <a href="#" class="bi-bag custom-icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+
+            <header class="site-header section-padding d-flex justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-12">
+                            <h1>
+                                <span class="d-block text-primary">Your Products</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+
+
+            <section class="product-detail section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="product-thumb">
+                                <img src="{{product.rasm.url}}" class="img-fluid product-image" width="400" height="400" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+
+
+
+
+
+
+                            <div class="product-info d-flex">
+                                <div>
+                                    <h3 class="product-title mb-0">{{product.nom}}</h3>
+                                    <strong class="d-block mt-4 mb-2">Price: {{product.narx}}$</strong>
+                                </div>
+                            </div>
+                            <div class="product-description">
+                                <strong class="d-block mt-4 mb-2">Description</strong>
+                                <p class="lead mb-5">{{product.malumot}}</p>
+                            </div>
+                            <div class="product-cart-thumb row">
+
+                                <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                                    <button type="submit" class="btn custom-btn cart-btn" data-bs-toggle="modal" data-bs-target="#cart-modal">Add to Cart</button>
+                                </div>
+
+
+
+
+
+
+                                <p>
+                                    <a href="/prdetail/{{product.id}}/" class="product-additional-link">Details</a>
+
+                                    <a href="#" class="product-additional-link">Delivery and Payment</a>
+                                </p>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+            <section class="related-product section-padding border-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="mb-5">New products</h3>
+                        </div>
+
+
+                        {% for i in asosiysah reversed %}
+                            {% if forloop.counter <= 3 %}
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="product-thumb">
+                                <a href="/prdetail/{{i.id}}/">
+                                    <p>New product</p>
+                                    <img src="{{i.rasm.url}}" class="img-fluid product-image" style="width: 400px; height: 400px;">
+                                </a>
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h6 class="product-title mb-0">
+                                            <a href="/prdetail/{{i.id}}/" class="product-title-link">{{i.nom|truncatechars:27}}</a>
+                                        </h6>
+                                    </div>
+                                    <small class="product-price text-muted ms-auto mt-auto mb-5">Price: {{i.narx}}$</small>
+                                </div>
+                            </div>
+                        </div>
+                            {% endif %}
+                        {% endfor %}
+
+
+
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="/">Accessory</a> Shop</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2023 <strong>Accessory Shop</strong></p>
+                        <br>
+                        <p class="copyright-text">Created by <a target="_blank">Ozodbek Xayrilojonov</a></p>
+                    </div>
+
+
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">About</h5>
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="/about/" class="footer-menu-link">Story</a></li>
+
+                            <li class="footer-menu-item"><a href="/contact/" class="footer-menu-link">Contact</a></li>
+
+                            <li class="footer-menu-item"><a href="/products/" class="footer-menu-link">Products</a></li>
+
+                            <li class="footer-menu-item"><a class="footer-menu-link">+998886628899</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+                        <ul class="social-icon">
+
+                            <li><a href="https://www.youtube.com/channel/UCOhVs7jyNord3dwGNvu7koA" class="social-icon-link bi-youtube"></a></li>
+
+                            <li><a href="https://github.com/BEK6628899" class="social-icon-link bi-github"></a></li>
+
+                            <li><a href="https://www.instagram.com/_ozodbek_1910/" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="https://www.linkedin.com/in/ozodbek-xayrullajonov-46a582220/" class="social-icon-link bi-linkedin"></a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        <!-- CART MODAL -->
+        <div class="modal fade" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0">
+                    <div class="modal-header flex-column">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+
+
+
+
+                        <div class="row">
+                            <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                                <img src="{{product.rasm.url}}" class="img-fluid product-image" alt="">
+                            </div>
+
+                            <div class="col-lg-6 col-12 mt-3 mt-lg-0">
+                                <h3 class="modal-title" id="exampleModalLabel">{{product.nom}}</h3>
+
+                                <p class="product-price text-muted mt-3">Price: {{product.narx}}$</p>
+
+                              <div style="display: flex; align-items: center;">
+                                  <p class="product-p" id="quantity">Quantity:
+                                  <button onclick="decreaseQuantity()">-</button>
+                                      <span class="ms-1">1</span>
+                                  <button onclick="increaseQuantity()">+</button></p>
+                              </div>
+
+                                <p class="product-p">Colour: <span class="ms-1">{{product.rang}}</span></p>
+
+                                <div class="border-top mt-4 pt-3">
+                                    <p class="product-p"><strong>Total: <span class="ms-1">$100</span></strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                          var quantityValue = 1;
+                          var productPrice = {{product.narx}}; // Mahsulot narxi (bu qatorda sizning malumotlar bazangizdan olinadi yoki to'g'ri qiymatga o'zgartiring)
+
+                          function decreaseQuantity() {
+                            if (quantityValue > 1) {
+                              quantityValue--;
+                            }
+                            updateQuantityAndTotal();
+                          }
+
+                          function increaseQuantity() {
+                            quantityValue++;
+                            updateQuantityAndTotal();
+                          }
+
+                          function updateQuantityAndTotal() {
+                            var quantityElement = document.getElementById("quantity");
+                            var quantitySpan = quantityElement.querySelector("span");
+                            quantitySpan.innerText = quantityValue;
+
+                            var totalElement = document.querySelector(".product-p strong span");
+                            var totalPrice = productPrice * quantityValue;
+                            totalElement.innerText = "$" + totalPrice.toFixed(1); // Nuqtadan keyingi bitta sonni ko'rsatish
+                          }
+
+                          // Sahifa yuklandiğida umumiy xisobni yangilaymiz
+                          updateQuantityAndTotal();
+                        </script>
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row w-50">
+                            <button type="button" class="btn custom-btn cart-btn ms-lg-4">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/Headroom.js' %}"></script>
+        <script src="{% static 'js/jQuery.headroom.js' %}"></script>
+        <script src="{% static 'js/slick.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+    </body>
+</html>

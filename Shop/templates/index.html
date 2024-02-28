@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Index</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/slick.css' %}"/>
+
+        <link href="{% static 'css/tooplate-little-fashion.css' %}" rel="stylesheet">
+    </head>
+
+
+
+
+
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+        <main>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <strong><span>Accessory</span> Shop</strong>
+                    </a>
+                    <div class="d-lg-none">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        <a href="/prdetail/" class="bi-bag custom-icon"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/products/">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact/">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about/">About</a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-lg-block">
+                            <a href="/signin/" class="bi-person custom-icon me-3"></a>
+                            <a href="#" class="bi-bag custom-icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+
+
+            <section class="slick-slideshow">   
+                <div class="slick-custom">
+                    <img src="{% static 'images/slideshow/airpods.jpg' %}" class="img-fluid" alt="">
+                    <div class="slick-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-10">
+                                    <h1 class="slick-title">The Best</h1>
+                                    <br>
+                                    <p style="color: white;">Aeropods and Headphones</p>
+                                    <br>
+                                    <a href="/products/" class="btn custom-btn">Our Products</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slick-custom">
+                    <img src="{% static 'images/slideshow/smartphone.jpg' %}" class="img-fluid" alt="">
+                    <div class="slick-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-10">
+                                    <h1 class="slick-title">Latest Generation</h1>
+                                    <p class="lead text-white mt-lg-3 mb-lg-5">Smartphones</p>
+                                    <a href="/products/" class="btn custom-btn">Our Products</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slick-custom">
+                    <img src="{% static 'images/slideshow/smartwotch.jpg' %}" class="img-fluid" alt="">
+                    <div class="slick-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-10">
+                                    <h1 class="slick-title">Latest Model </h1>
+                                    <p class="lead text-white mt-lg-3 mb-lg-5">Smartwatches</p>
+                                    <a href="/products/" class="btn custom-btn">Our Products</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            <section class="about section-padding">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">Briefly about <span>our products</span></h2>
+                        </div>
+                    </div>
+            </section>
+
+
+
+
+
+
+            <section class="front-product">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-12">
+                            <img src="{% static 'images/products.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="px-5 py-5 py-lg-0">
+                                <h2 class="mb-4"><span>Products</span> in our store</h2>
+                                <p class="lead mb-4">In our store, you can buy Airpods, Smartphones, Laptops,Smartwatches,
+                                    Wristwatches, Headphones, Smartphone Cases and similar products</p>
+                                <a href="/products/" class="custom-link">
+                                    Switch to Products
+                                    <i class="bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+            <section class="featured-product section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5"><span>Products</span></h2>
+                        </div>
+                        {% for i in asosiysahifa reversed %}
+                            {% if forloop.counter <= 6 %}
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="product-thumb">
+                                <a href="/prdetail/{{i.id}}/">
+                                    <p>New product</p>
+                                    <img src="{{i.rasm.url}}" class="img-fluid product-image" style="width: 300px; height: 300px;">
+                                </a>
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h6 class="product-title mb-0">
+                                            <a href="/prdetail/{{i.id}}/" class="product-title-link">{{i.nom|truncatechars:27}}</a>
+                                        </h6>
+                                    </div>
+                                    <small class="product-price text-muted ms-auto mt-auto mb-5">Price: {{i.narx}}$</small>
+                                </div>
+                            </div>
+                        </div>
+                            {% endif %}
+                        {% endfor %}
+
+
+
+                        <div class="col-12 text-center">
+                            <a href="/products/" class="view-all">View All Products</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="/">Accessory</a> Shop</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2023 <strong>Accessory Shop</strong></p>
+                        <br>
+                        <p class="copyright-text">Created by <a target="_blank">Ozodbek Xayrilojonov</a></p>
+                    </div>
+
+
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">About</h5>
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="/about/" class="footer-menu-link">Story</a></li>
+
+                            <li class="footer-menu-item"><a href="/contact/" class="footer-menu-link">Contact</a></li>
+
+                            <li class="footer-menu-item"><a href="/products/" class="footer-menu-link">Products</a></li>
+
+                            <li class="footer-menu-item"><a class="footer-menu-link">+998886628899</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+                        <ul class="social-icon">
+
+                            <li><a href="https://www.youtube.com/channel/UCOhVs7jyNord3dwGNvu7koA" class="social-icon-link bi-youtube"></a></li>
+
+                            <li><a href="https://github.com/BEK6628899" class="social-icon-link bi-github"></a></li>
+
+                            <li><a href="https://www.instagram.com/_ozodbek_1910/" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="https://www.linkedin.com/in/ozodbek-xayrullajonov-46a582220/" class="social-icon-link bi-linkedin"></a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </footer>
+        <!-- JAVASCRIPT FILES -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/Headroom.js' %}"></script>
+        <script src="{% static 'js/jQuery.headroom.js' %}"></script>
+        <script src="{% static 'js/slick.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+    </body>
+</html>
+
+
+

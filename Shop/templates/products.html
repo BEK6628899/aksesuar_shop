@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Products</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/slick.css' %}"/>
+
+        <link href="{% static 'css/tooplate-little-fashion.css' %}" rel="stylesheet">
+    </head>
+
+
+
+
+
+
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+        <main>
+           <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <strong><span>Accessory</span> Shop</strong>
+                    </a>
+                    <div class="d-lg-none">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        <a href="product-detail.html" class="bi-bag custom-icon"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/products/">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact/">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about/">About</a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-lg-block">
+                            <a href="/signin/" class="bi-person custom-icon me-3"></a>
+                            <a href="#" class="bi-bag custom-icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+
+                <style>
+                    .site-header {
+                        background-image: url('https://hoanghamobile.com/tin-tuc/wp-content/uploads/2021/08/so-huu-iPhone-1.jpg'); /* Rasm manzilini shu yerga yozing */
+                        background-size: cover; /* Rasmni to'liq o'qishga moslashtirish */
+                        background-position: center; /* Rasmni markazga qo'yish */
+                    }
+                </style>
+
+                <header class="site-header section-padding d-flex justify-content-center align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 col-12">
+                                <h1>
+                                    <span class="d-block text-primary" style="color: black;">Our Products</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div><br><br></div>
+
+
+
+
+<style>
+                    .button-container {
+                        text-align: center;
+                    }
+
+                    .button-container button {
+                        border: none;
+                        background: linear-gradient(45deg, #000000, #000000);
+                        color: #fff;
+                        padding: 10px 20px;
+                        margin: 5px;
+                        border-radius: 5px;
+                        transition: transform 0.3s;
+                        width: 240px;
+                        height: 50px;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                        transition: transform 0.3s;
+                    }
+
+                    .button-container button:hover {
+                        transform: scale(1.1);
+                        background: linear-gradient(45deg, #FF0000, #FF0000); /* Qizil rang */
+                    }
+                </style>
+
+                <div class="button-container">
+                    <button><small><a href="#telefonlar" style="text-decoration: none; color: inherit;">Smartphones and Notebooks</a></small></button>
+                    <button><small><a href="#soatlar" style="text-decoration: none; color: inherit;">Smartwatches and Airpods</a></small></button>
+                    <button><small><a href="#boshqalar" style="text-decoration: none; color: inherit;">Other Products</a></small></button>
+                </div>
+
+
+
+
+
+                <style>
+                    .my-button-style {
+                        text-align: left;
+                    }
+
+                    .my-button-style button {
+                        border: none;
+                        background: linear-gradient(45deg, #000000, #000000);
+                        color: #fff;
+                        padding: 10px 20px;
+                        margin: 5px;
+                        border-radius: 5px;
+                        transition: transform 0.3s;
+                        width: 240px;
+                        height: 50px;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                        transition: transform 0.3s;
+                    }
+
+                    .my-button-style button:hover {
+                        transform: scale(1.1);
+                    }
+                </style>
+
+
+
+
+            <section class="products section-padding">
+                <div class="container">
+                    <div class="row">
+
+
+                        <div id="telefonlar">
+                            <div class="col-12">
+                                <div class="button-container my-button-style">
+                                    <a href="/products/">
+                                        <button><small>Smartphones and Notebooks</small></button>
+                                    </a>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                            {% for i in telefons reversed%}
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="product-thumb">
+                                <a href="/prdetail/{{i.AsosiySahifa.id}}/">
+                                    <img src="{{i.AsosiySahifa.rasm.url}}" class="img-fluid product-image" width="300" height="600" alt="">
+                                </a>
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h6 class="product-title mb-0">
+                                            <a href="/prdetail/{{i.id}}/" class="product-title-link">{{i.AsosiySahifa.nom|truncatechars:27}}</a>
+                                        </h6>
+                                        <p class="product-p">Original products&nbsp;&nbsp;&nbsp;Price: {{i.AsosiySahifa.narx}}$</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            {% endfor %}
+                            </div>
+                    </div>
+
+
+        ______________________________________________________________________________________________________________________________________________________________________
+                        <br>
+                        <br>
+                        <div id="soatlar">
+                            <div class="col-12">
+                                <div class="button-container my-button-style">
+                                    <a href="/products/">
+                                        <button><small>Smartwatches and Airpods</small></button>
+                                    </a>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                        {% for j in soats reversed %}
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="product-thumb">
+                                <a href="/prdetail/{{j.AsosiySahifa.id}}/">
+                                    <img src="{{ j.AsosiySahifa.rasm.url }}" class="img-fluid product-image" width="300" height="600" alt="">
+                                </a>
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h6 class="product-title mb-0">
+                                            <a href="/prdetail/{{j.id}}/" class="product-title-link">{{j.AsosiySahifa.nom|truncatechars:27}}</a>
+                                        </h6>
+                                        <p class="product-p">Original products&nbsp;&nbsp;&nbsp;Price: {{j.AsosiySahifa.narx}}$</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            {% endfor %}
+                            </div>
+                        </div>
+
+
+        _______________________________________________________________________________________________________________________________________________________________________
+                        <br>
+                        <br>
+                    <div id="boshqalar">
+                        <div class="col-12">
+                                <div class="button-container my-button-style">
+                                    <a href="/products/">
+                                        <button><small>Other Products</small></button>
+                                    </a>
+                                    <br>
+                                    <br>
+                                </div>
+                        </div>
+                        <div class="row">
+                        {% for k in boshqas reversed %}
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="product-thumb">
+                                <a href="/prdetail/{{k.AsosiySahifa.id}}/">
+                                    <img src="{{k.AsosiySahifa.rasm.url}}" class="img-fluid product-image" width="300" height="600" alt="">
+                                </a>
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h6 class="product-title mb-0">
+                                            <a href="/prdetail/{{k.id}}/" class="product-title-link">{{k.AsosiySahifa.nom|truncatechars:27}}</a>
+                                        </h6>
+                                        <p class="product-p">Original products&nbsp;&nbsp;&nbsp;Price: {{k.AsosiySahifa.narx}}$</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+
+
+
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+
+
+           <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="/">Accessory</a> Shop</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2023 <strong>Accessory Shop</strong></p>
+                        <br>
+                        <p class="copyright-text">Created by <a target="_blank">Ozodbek Xayrilojonov</a></p>
+                    </div>
+
+
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">About</h5>
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="/about/" class="footer-menu-link">Story</a></li>
+
+                            <li class="footer-menu-item"><a href="/contact/" class="footer-menu-link">Contact</a></li>
+
+                            <li class="footer-menu-item"><a href="/products/" class="footer-menu-link">Products</a></li>
+
+                            <li class="footer-menu-item"><a class="footer-menu-link">+998886628899</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+                        <ul class="social-icon">
+
+                            <li><a href="https://www.youtube.com/channel/UCOhVs7jyNord3dwGNvu7koA" class="social-icon-link bi-youtube"></a></li>
+
+                            <li><a href="https://github.com/BEK6628899" class="social-icon-link bi-github"></a></li>
+
+                            <li><a href="https://www.instagram.com/_ozodbek_1910/" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="https://www.linkedin.com/in/ozodbek-xayrullajonov-46a582220/" class="social-icon-link bi-linkedin"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/Headroom.js' %}"></script>
+        <script src="{% static 'js/jQuery.headroom.js' %}"></script>
+        <script src="{% static 'js/slick.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
+    </body>
+</html>
